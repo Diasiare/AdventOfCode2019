@@ -1,6 +1,6 @@
 #pragma 
 
-#include <array>;
+#include <array>
 
 class Day1
 {

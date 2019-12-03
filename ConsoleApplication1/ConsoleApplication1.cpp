@@ -3,15 +3,17 @@
 
 #include <iostream>
 #include <array>
+#include <utility>
 #include "Test.h"
 #include "Day1.h"
+#include "Day2.h"
 
 using namespace std;
 
 int main()
 {
-	cout << Day1::GetSumOfFuelReqs() << endl;
-	cout << Day1::GetItterativeSumOfFuelReqs() << endl;
+	cout << Day2::Part1() << endl;
+	cout << Day2::Part2() << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
