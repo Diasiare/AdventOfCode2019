@@ -7,13 +7,15 @@
 #include "Test.h"
 #include "Day1.h"
 #include "Day2.h"
+#include "Day3.h"
+#include "Day4.h"
 
 using namespace std;
 
 int main()
 {
-	cout << Day2::Part1() << endl;
-	cout << Day2::Part2() << endl;
+	cout << Day4::Part1() << endl;
+	cout << Day4::Part2() << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
