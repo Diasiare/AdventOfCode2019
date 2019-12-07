@@ -1,57 +1,7 @@
 #include "Day2.h"
 
 #include <utility>
-
-Computer::Computer(vector<int> initialState) : state_(initialState) {};
-
-void Computer::RestoreState(int noun, int verb) {
-	state_[1] = noun;
-	state_[2] = verb;
-}
-
-int Computer::ValueAt(int pos) {
-	return state_[state_[pos]];
-}
-
-void Computer::WriteTo(int pos, int value) {
-	state_[state_[pos]] = value;
-}
-
-void Computer::ProcessOpcode1() {
-	int v1 = ValueAt(currentPosition + 1);
-	int v2 = ValueAt(currentPosition + 2);
-	WriteTo(currentPosition + 3, v1 + v2);
-}
-
-void Computer::ProcessOpcode2() {
-	int v1 = ValueAt(currentPosition + 1);
-	int v2 = ValueAt(currentPosition + 2);
-	WriteTo(currentPosition + 3, v1 * v2);
-}
-
-int Computer::Run() {
-
-	while (currentPosition < state_.size()) {
-		int opcode = state_[currentPosition];
-		switch (state_[currentPosition]) {
-		case 1:
-			if (currentPosition + 3 >= state_.size()) return -1;
-			ProcessOpcode1();
-			break;
-		case 2:
-			if (currentPosition + 3 >= state_.size()) return -1;
-			ProcessOpcode2();
-			break;
-		case 99:
-			return state_[0];
-		default:
-			cout << "CRITICAL FAILURE " << currentPosition << endl;
-			return -1;
-		}
-		currentPosition += 4;
-	}
-	return -1;
-}
+#include "Computer.h"
 
 
 

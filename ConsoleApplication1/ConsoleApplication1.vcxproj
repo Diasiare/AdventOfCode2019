@@ -152,19 +152,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Computer.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Day1.cpp" />
     <ClCompile Include="Day2.cpp" />
     <ClCompile Include="Day3.cpp" />
     <ClCompile Include="Day4.cpp" />
+    <ClCompile Include="Day5.cpp" />
+    <ClCompile Include="Day6.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Computer.h" />
     <ClInclude Include="Day1.h" />
     <ClInclude Include="Day2.h" />
     <ClInclude Include="Day3.h" />
     <ClInclude Include="Day4.h" />
+    <ClInclude Include="Day5.h" />
+    <ClInclude Include="Day6.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Part6Input.txt">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
