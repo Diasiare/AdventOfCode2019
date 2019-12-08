@@ -11,13 +11,15 @@
 #include "Day4.h"
 #include "Day5.h"
 #include "Day6.h"
+#include "Day7.h"
+#include "Day8.h";
 
 using namespace std;
 
 int main()
 {
-	cout << Day6::Part1() << endl;
-	cout << Day6::Part2() << endl;
+	cout << Day8::Part1() << endl;
+	cout << Day8::Part2() << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
