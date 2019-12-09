@@ -4,8 +4,6 @@
 #include <string>
 #include <unordered_set>
 
-using namespace std;
-
 namespace day3 {
 
 	class Day3
@@ -13,18 +11,18 @@ namespace day3 {
 	public:
 		static int Part1();
 		static int Part2();
-		static vector<pair<char, int>> ParseLine(const string&);
+		static std::vector<std::pair<char, int>> ParseLine(const std::string&);
 	};
 
 
 	class Cabinet
 	{
 	private:
-		unordered_map<int, unordered_map<int, unordered_map<int, int>>> repr;
+		std::unordered_map<int, std::unordered_map<int, std::unordered_map<int, int>>> repr;
 		int lineCount;
 
 	public:
-		void AddLine(const vector<pair<char, int>>& line);
+		void AddLine(const std::vector<std::pair<char, int>>& line);
 		int DistanceToClosestIntersection();
 		int ClosestIntersection();
 	};

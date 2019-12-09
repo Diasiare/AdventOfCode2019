@@ -4,6 +4,7 @@
 #include "Computer.h"
 
 using namespace day2;
+using ::std::vector;
 using namespace computer;
 
 int Day2::Part1() {

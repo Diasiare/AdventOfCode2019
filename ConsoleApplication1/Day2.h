@@ -1,8 +1,4 @@
 #pragma once
-#include <vector>
-#include <iostream>
-
-using namespace std;
 
 namespace day2 {
 

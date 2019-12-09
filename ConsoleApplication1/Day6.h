@@ -5,29 +5,27 @@
 #include <memory>
 #include <unordered_set>
 
-using namespace std;
-
 namespace day6 {
 
 class Day6
 {
 public:
-	static vector<pair<string, string>> ParseOrbitMap();
+	static std::vector<std::pair<std::string, std::string>> ParseOrbitMap();
 	static int Part1();
 	static int Part2();
 };
 
 class Planet {
 public:
-	string name;
-	vector<shared_ptr<Planet>> orbitedBy;
-	shared_ptr<Planet> parent;
+	std::string name;
+	std::vector<std::shared_ptr<Planet>> orbitedBy;
+	std::shared_ptr<Planet> parent;
 
-	Planet(string);
-	void AddOrbit(shared_ptr<Planet>, shared_ptr<Planet>);
+	Planet(std::string);
+	void AddOrbit(std::shared_ptr<Planet>, std::shared_ptr<Planet>);
 	int OrbitCount(int depth);
 	static int FindPathLengthBetween(Planet&, Planet&);
-	int DistanceTo(string name, unordered_set<string> &visited);
+	int DistanceTo(std::string name, std::unordered_set<std::string> &visited);
 };
 
 }

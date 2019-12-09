@@ -6,8 +6,13 @@
 #include <unordered_map>
 #include <unordered_set>
 
-using namespace std;
 using namespace day6;
+
+using ::std::string;
+using ::std::shared_ptr;
+using ::std::string;
+using ::std::vector;
+using ::std::pair;
 
 Planet::Planet(string name) : name(name)
 {
@@ -29,12 +34,12 @@ int Planet::OrbitCount(int depth) {
 
 int Planet::FindPathLengthBetween(Planet& start, Planet& finish)
 {
-	unordered_set<string> visited;
+	std::unordered_set<string> visited;
 	return start.DistanceTo(finish.name, visited);
 
 }
 
-int Planet::DistanceTo(string target, unordered_set<string>& visited) {
+int Planet::DistanceTo(string target, std::unordered_set<string>& visited) {
 	if (target == name) return 0;
 	visited.insert(name);
 
@@ -55,7 +60,7 @@ int Planet::DistanceTo(string target, unordered_set<string>& visited) {
 vector<pair<string, string>> Day6::ParseOrbitMap()
 {
 	vector<pair<string, string>> output;
-	fstream inf("Part6Input.txt");
+	std::fstream inf("Part6Input.txt");
 	string line;
 	while (getline(inf, line)) {
 		int pos = line.find(')');
@@ -69,12 +74,12 @@ vector<pair<string, string>> Day6::ParseOrbitMap()
 
 int Day6::Part1()
 {
-	unordered_map<string, shared_ptr<Planet>> planets;
+	std::unordered_map<string, shared_ptr<Planet>> planets;
 	auto orbits = ParseOrbitMap();
 	for (auto orbit : orbits) {
 		shared_ptr<Planet> center;
 		if (planets.count(orbit.first) == 0) {
-			center = make_shared<Planet>(orbit.first);
+			center = std::make_shared<Planet>(orbit.first);
 			planets[orbit.first] = center;
 		}
 		else {
@@ -82,7 +87,7 @@ int Day6::Part1()
 		}
 		shared_ptr<Planet> outer;
 		if (planets.count(orbit.second) == 0) {
-			outer = make_shared<Planet>(orbit.second);
+			outer = std::make_shared<Planet>(orbit.second);
 			planets[orbit.second] = outer;
 		}
 		else {
@@ -94,12 +99,12 @@ int Day6::Part1()
 }
 
 int Day6::Part2() {
-	unordered_map<string, shared_ptr<Planet>> planets;
+	std::unordered_map<string, shared_ptr<Planet>> planets;
 	auto orbits = ParseOrbitMap();
 	for (auto orbit : orbits) {
 		shared_ptr<Planet> center;
 		if (planets.count(orbit.first) == 0) {
-			center = make_shared<Planet>(orbit.first);
+			center = std::make_shared<Planet>(orbit.first);
 			planets[orbit.first] = center;
 		}
 		else {
@@ -107,7 +112,7 @@ int Day6::Part2() {
 		}
 		shared_ptr<Planet> outer;
 		if (planets.count(orbit.second) == 0) {
-			outer = make_shared<Planet>(orbit.second);
+			outer = std::make_shared<Planet>(orbit.second);
 			planets[orbit.second] = outer;
 		}
 		else {

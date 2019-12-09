@@ -5,6 +5,7 @@
 #include <array>
 
 using namespace computer;
+using namespace std;
 
 constexpr bool debug_disabled = true;
 

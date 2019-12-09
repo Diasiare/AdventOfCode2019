@@ -5,7 +5,9 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
+using ::std::string;
+using ::std::vector;
+using ::std::pair;
 using namespace day3;
 
 int Day3::Part1()
@@ -47,7 +49,7 @@ vector<pair<char, int>> Day3::ParseLine(const string& desc) {
 		int end = pos != string::npos ? pos : desc.size();
 		char direction = desc[begin];
 		int steps = std::stol(desc.substr(begin + 1, end - (begin + 1)));
-		output.push_back(make_pair(direction, steps));
+		output.push_back(std::make_pair(direction, steps));
 
 	} while (pos != string::npos);
 	return output;
@@ -78,7 +80,7 @@ void Cabinet::AddLine(const vector<pair<char, int>>& line) {
 			x += dx;
 			y += dy;
 			pos++;
-			unordered_map<int, int>& point = repr[x][y];
+			std::unordered_map<int, int>& point = repr[x][y];
 			if (!(point.count(lineCount) > 0)) {
 				point[lineCount] = pos;
 			}

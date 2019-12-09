@@ -1,7 +1,5 @@
 #pragma once
 
-#include <string>
-
 namespace day4 {
 
 	class Day4

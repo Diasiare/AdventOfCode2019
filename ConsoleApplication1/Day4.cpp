@@ -2,7 +2,8 @@
 
 #include <string>
 
-using namespace std;
+using ::std::string;
+
 using namespace day4;
 
 bool Day4::MatchesCriteria(int input)
