@@ -7,6 +7,8 @@
 
 using namespace std;
 
+namespace day6 {
+
 class Day6
 {
 public:
@@ -27,3 +29,5 @@ public:
 	static int FindPathLengthBetween(Planet&, Planet&);
 	int DistanceTo(string name, unordered_set<string> &visited);
 };
+
+}

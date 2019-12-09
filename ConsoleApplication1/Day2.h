@@ -4,11 +4,15 @@
 
 using namespace std;
 
-class Day2
-{
-public:
-	static int Part1();
+namespace day2 {
 
-	static int Part2();
+	class Day2
+	{
+	public:
+		static int Part1();
 
-};
+		static int Part2();
+
+	};
+
+}

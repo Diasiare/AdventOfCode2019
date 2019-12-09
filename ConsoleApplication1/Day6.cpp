@@ -7,6 +7,7 @@
 #include <unordered_set>
 
 using namespace std;
+using namespace day6;
 
 Planet::Planet(string name) : name(name)
 {
@@ -29,11 +30,11 @@ int Planet::OrbitCount(int depth) {
 int Planet::FindPathLengthBetween(Planet& start, Planet& finish)
 {
 	unordered_set<string> visited;
-	return start.DistanceTo(finish.name , visited);
+	return start.DistanceTo(finish.name, visited);
 
 }
 
-int Planet::DistanceTo(string target, unordered_set<string> &visited) {
+int Planet::DistanceTo(string target, unordered_set<string>& visited) {
 	if (target == name) return 0;
 	visited.insert(name);
 

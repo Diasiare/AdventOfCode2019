@@ -6,6 +6,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace day3;
 
 int Day3::Part1()
 {
@@ -45,7 +46,7 @@ vector<pair<char, int>> Day3::ParseLine(const string& desc) {
 		pos = desc.find(',', pos + 1);
 		int end = pos != string::npos ? pos : desc.size();
 		char direction = desc[begin];
-		int steps = std::stol(desc.substr(begin+1, end - (begin+1)));
+		int steps = std::stol(desc.substr(begin + 1, end - (begin + 1)));
 		output.push_back(make_pair(direction, steps));
 
 	} while (pos != string::npos);
@@ -88,8 +89,8 @@ void Cabinet::AddLine(const vector<pair<char, int>>& line) {
 
 int Cabinet::DistanceToClosestIntersection()
 {
-	int closestX = INT_MAX/2 -1;
-	int closestY = INT_MAX/2 -1;
+	int closestX = INT_MAX / 2 - 1;
+	int closestY = INT_MAX / 2 - 1;
 	for (auto p1 : repr) {
 		int x = abs(p1.first);
 		for (auto p2 : p1.second) {

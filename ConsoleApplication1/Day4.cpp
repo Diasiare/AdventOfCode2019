@@ -3,6 +3,7 @@
 #include <string>
 
 using namespace std;
+using namespace day4;
 
 bool Day4::MatchesCriteria(int input)
 {
@@ -38,13 +39,13 @@ bool Day4::MatchesCriteria2(int input)
 	bool hasSequence = false;
 	bool isIncreasing = true;
 	string asString = std::to_string(input);
-	
+
 	for (int i = 0; i < asString.size() - 1; i++) {
 		char c = asString[i];
 		isIncreasing = isIncreasing && c <= asString[i + 1];
-		hasSequence = hasSequence || 
-			(c == asString[i + 1] && 
-			(i < 1 || asString[i - 1] != c) && 
+		hasSequence = hasSequence ||
+			(c == asString[i + 1] &&
+			(i < 1 || asString[i - 1] != c) &&
 				(i + 2 >= asString.size() || asString[i + 2] != c));
 	}
 
@@ -65,3 +66,4 @@ int Day4::Part2()
 
 	return CountMatchesBetween2(382345, 843167);
 }
+
