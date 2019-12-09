@@ -132,6 +132,13 @@ bool Computer::HasSufficientLength(int length) {
 	return currentPosition + length - 1 < state_.size();
 }
 
+
+#define EXEC(METHOD, LENGTH) \
+	advance = LENGTH; \
+	if (!HasSufficientLength(advance)) return -1; \
+	METHOD(); \
+	break
+
 int Computer::Run() {
 
 	while (currentPosition < state_.size()) {
@@ -139,52 +146,15 @@ int Computer::Run() {
 		dlog << state_[currentPosition] << ", ";
 		int advance = 0;
 		switch (opcode) {
-		case 1:
-			advance = 4;
-			if (!HasSufficientLength(advance)) return -1;
-			if (currentPosition + 3 >= state_.size()) return -1;
-			ProcessOpcode1();
-			break;
-		case 2:
-			advance = 4;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode2();
-			break;
-		case 3:
-			advance = 2;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode3();
-			break;
-		case 4:
-			advance = 2;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode4();
-			break;
-		case 5:
-			advance = 3;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode5();
-			break;
-		case 6:
-			advance = 3;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode6();
-			break;
-		case 7:
-			advance = 4;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode7();
-			break;
-		case 8:
-			advance = 4;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode8();
-			break;
-		case 9:
-			advance = 2;
-			if (!HasSufficientLength(advance)) return -1;
-			ProcessOpcode9();
-			break;
+		case 1: EXEC(ProcessOpcode1, 4);
+		case 2: EXEC(ProcessOpcode2, 4);
+		case 3: EXEC(ProcessOpcode3, 2);
+		case 4: EXEC(ProcessOpcode4, 2);
+		case 5: EXEC(ProcessOpcode5, 3);
+		case 6:	EXEC(ProcessOpcode6, 3);
+		case 7: EXEC(ProcessOpcode7, 4);
+		case 8: EXEC(ProcessOpcode8, 4);
+		case 9: EXEC(ProcessOpcode9, 2);
 		case 99:
 			return state_[0];
 		default:
