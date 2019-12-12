@@ -155,6 +155,9 @@
     <ClCompile Include="Computer.cpp" />
     <ClCompile Include="ConsoleApplication1.cpp" />
     <ClCompile Include="Day1.cpp" />
+    <ClCompile Include="Day10.cpp" />
+    <ClCompile Include="Day11.cpp" />
+    <ClCompile Include="Day12.cpp" />
     <ClCompile Include="Day2.cpp" />
     <ClCompile Include="Day3.cpp" />
     <ClCompile Include="Day4.cpp" />
@@ -163,11 +166,15 @@
     <ClCompile Include="Day7.cpp" />
     <ClCompile Include="Day8.cpp" />
     <ClCompile Include="Day9.cpp" />
+    <ClCompile Include="helpers.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Computer.h" />
     <ClInclude Include="Day1.h" />
+    <ClInclude Include="Day10.h" />
+    <ClInclude Include="Day11.h" />
+    <ClInclude Include="Day12.h" />
     <ClInclude Include="Day2.h" />
     <ClInclude Include="Day3.h" />
     <ClInclude Include="Day4.h" />
@@ -176,10 +183,12 @@
     <ClInclude Include="Day7.h" />
     <ClInclude Include="Day8.h" />
     <ClInclude Include="Day9.h" />
+    <ClInclude Include="helpers.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="Part10Input.txt" />
     <Text Include="Part6Input.txt">
       <DeploymentContent>true</DeploymentContent>
     </Text>

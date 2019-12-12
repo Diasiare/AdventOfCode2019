@@ -7,8 +7,6 @@
 using namespace computer;
 using namespace std;
 
-constexpr bool debug_disabled = true;
-
 StandardIODriver::StandardIODriver(NUM_TYPE v) : input(v) {};
 
 void StandardIODriver::Write(NUM_TYPE value) {
@@ -19,7 +17,7 @@ NUM_TYPE StandardIODriver::Read() {
 	return input;
 };
 
-
+constexpr bool debug_disabled = true;
 #define dlog \
     if (debug_disabled) {} \
     else std::cout
@@ -133,10 +131,10 @@ bool Computer::HasSufficientLength(int length) {
 }
 
 
-#define EXEC(METHOD, LENGTH) \
+#define EXEC(CODE, LENGTH) \
 	advance = LENGTH; \
 	if (!HasSufficientLength(advance)) return -1; \
-	METHOD(); \
+	ProcessOpcode##CODE(); \
 	break
 
 int Computer::Run() {
@@ -146,15 +144,15 @@ int Computer::Run() {
 		dlog << state_[currentPosition] << ", ";
 		int advance = 0;
 		switch (opcode) {
-		case 1: EXEC(ProcessOpcode1, 4);
-		case 2: EXEC(ProcessOpcode2, 4);
-		case 3: EXEC(ProcessOpcode3, 2);
-		case 4: EXEC(ProcessOpcode4, 2);
-		case 5: EXEC(ProcessOpcode5, 3);
-		case 6:	EXEC(ProcessOpcode6, 3);
-		case 7: EXEC(ProcessOpcode7, 4);
-		case 8: EXEC(ProcessOpcode8, 4);
-		case 9: EXEC(ProcessOpcode9, 2);
+		case 1: EXEC(1, 4);
+		case 2: EXEC(2, 4);
+		case 3: EXEC(3, 2);
+		case 4: EXEC(4, 2);
+		case 5: EXEC(5, 3);
+		case 6:	EXEC(6, 3);
+		case 7: EXEC(7, 4);
+		case 8: EXEC(8, 4);
+		case 9: EXEC(9, 2);
 		case 99:
 			return state_[0];
 		default:
