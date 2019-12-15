@@ -140,6 +140,7 @@ bool Computer::HasSufficientLength(int length) {
 int Computer::Run() {
 
 	while (currentPosition < state_.size()) {
+		if (ioDriver && ioDriver->Stop()) return -1;
 		int opcode = state_[currentPosition] % 100;
 		dlog << state_[currentPosition] << ", ";
 		int advance = 0;

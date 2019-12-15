@@ -13,6 +13,9 @@ namespace computer {
 	public:
 		virtual NUM_TYPE Read() = 0;
 		virtual void Write(long long v) = 0;
+		virtual bool Stop() {
+			return false;
+		}
 	};
 
 	class StandardIODriver : public IODriver {
