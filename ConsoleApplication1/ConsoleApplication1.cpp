@@ -18,8 +18,9 @@
 #include "Day13.h"
 #include "Day14.h"
 #include "Day15.h"
+#include "Day16.h"
 
 int main()
 {
-	std::cout << day15::Day15::Part2() << std::endl;
+	std::cout << day16::Day16::Part2() << std::endl;
 }
