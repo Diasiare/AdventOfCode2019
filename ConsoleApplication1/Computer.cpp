@@ -22,8 +22,8 @@ constexpr bool debug_disabled = true;
     if (debug_disabled) {} \
     else std::cout
 
-Computer::Computer(vector<NUM_TYPE> initialState) : Computer(initialState, nullptr) {};
-Computer::Computer(vector<NUM_TYPE> initialState, shared_ptr<IODriver> ioDriver) : ioDriver(ioDriver) {
+Computer::Computer(vector<NUM_TYPE> & initialState) : Computer(initialState, nullptr) {};
+Computer::Computer(vector<NUM_TYPE> & initialState, shared_ptr<IODriver> ioDriver) : ioDriver(ioDriver) {
 	for (int i = 0; i < initialState.size(); i++) {
 		state_[i] = initialState[i];
 	}
@@ -140,7 +140,6 @@ bool Computer::HasSufficientLength(int length) {
 int Computer::Run() {
 
 	while (currentPosition < state_.size()) {
-		if (ioDriver && ioDriver->Stop()) return -1;
 		int opcode = state_[currentPosition] % 100;
 		dlog << state_[currentPosition] << ", ";
 		int advance = 0;
@@ -162,6 +161,7 @@ int Computer::Run() {
 		}
 		dlog << currentPosition << endl;
 		currentPosition += advance;
+		if (ioDriver && ioDriver->Stop()) return -1;
 	}
 	return -1;
 }

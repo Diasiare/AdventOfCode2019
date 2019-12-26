@@ -21,5 +21,7 @@ namespace helpers {
 
 	std::vector<std::string> SplitBy(std::string& input, std::string by);
 	std::string ReadFile(std::string& name);
+
+	int countSetBits(int n);
 }
 

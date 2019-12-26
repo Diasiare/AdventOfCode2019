@@ -1,13 +1,10 @@
 #pragma once
 
-namespace day18 {
-
-	class Day18
+namespace day25 {
+	class Day25
 	{
 	public:
 		static int Part1();
-		static int Part2();
 	};
-
 }
 

@@ -62,8 +62,8 @@ namespace computer {
 		void ProcessOpcode8();
 		void ProcessOpcode9();
 	public:
-		Computer(std::vector<NUM_TYPE> initialState);
-		Computer(std::vector<NUM_TYPE> initialState, std::shared_ptr<IODriver> ioDriver);
+		Computer(std::vector<NUM_TYPE> & initialState);
+		Computer(std::vector<NUM_TYPE> & initialState, std::shared_ptr<IODriver> ioDriver);
 		void RestoreState(NUM_TYPE, NUM_TYPE);
 		int Run();
 	};

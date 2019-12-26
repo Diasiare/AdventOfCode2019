@@ -77,6 +77,30 @@
     <ClCompile Include="Day18.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Day19.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Day20.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Day21.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Day22.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfInt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Day23.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Day24.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Day25.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Test.h">
@@ -145,11 +169,41 @@
     <ClInclude Include="Day18.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Day19.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day20.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day21.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day22.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day23.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day24.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Day25.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Part6Input.txt" />
     <Text Include="Part10Input.txt" />
     <Text Include="Part14Input.txt" />
     <Text Include="Part18Input.txt" />
+    <Text Include="Part20Input.txt" />
+    <Text Include="Part21Input.txt" />
+    <Text Include="Part22Input.txt" />
+    <Text Include="Part23Input.txt" />
+    <Text Include="Part24Input.txt" />
+    <Text Include="Part25Input.txt" />
   </ItemGroup>
 </Project>
